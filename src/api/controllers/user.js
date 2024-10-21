@@ -50,6 +50,7 @@ const login = async (req, res, next) => {
 
 const deleteUser = async (req, res, next) => {
   try {
+    console.log('Al menos llegar está llegando');
     const { id } = req.params;
     const userDeleted = await User.findByIdAndDelete(id);
     return res.status(200).json({ mensaje: 'Usuario eliminado', userDeleted });
