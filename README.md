@@ -1,36 +1,59 @@
 # Proyecto 7
 
-Se trata de un proyecto backend que organiza canciones por plataformas y permite la creación de usuarios
+Este proyecto es un backend diseñado para organizar canciones por plataformas y permitir la creación de usuarios. El sistema permite gestionar canciones, plataformas, y usuarios con diferentes roles, incluyendo la posibilidad de que los administradores gestionen contenido y usuarios.
 
 ## Features
 
-- Crear, editar y eliminar canciones
+Endpoints
 
-Lo primero para poder comenzar a utilizar el proyecto es crear un usuario. Todo el mundo tiene acceso a la información de los videojuegos y de las plataformas, para ello se accede a través de:
- - http://localhost:3000/api/v1/canciones
- - http://localhost:3000/api/v1/plataformas
+**Acceso público**
+Todo el mundo puede acceder a la información de las canciones y plataformas:
 
-Para poder hacer cualquier tipo de modificacion (o al menos intentarlo) hay que estar registrado, para registrarse hay que hacerlo a través de:
- - http://localhost:3000/api/v1/users/register
+**Obtener canciones:**
+-GET http://localhost:3000/api/v1/canciones
+**Obtener plataformas:**
+-GET http://localhost:3000/api/v1/plataformas
 
-Una vez registrado hay que iniciar sesión:
- - http://localhost:3000/api/v1/users/login
 
-Los usuarios se crean directamente con rol de user, los user pueden subir juegos (aunque un admin  tiene que verificarlos) y eliminarse a sí mismos:
- - http://localhost:3000/api/v1/canciones
- - http://localhost:3000/api/v1/users/:id
+**Acceso registrado (usuarios)**
+Para hacer cualquier tipo de modificación, los usuarios deben estar registrados e iniciar sesión.
 
-Los admin pueden eliminar canciones, plataformas y usuarios, así como editarlos. Los admin pueden convertir en admin a los otros usuarios:
- - http://localhost:3000/api/v1/users/:id
- - http://localhost:3000/api/v1/canciones/:id
- - http://localhost:3000/api/v1/plataformas/:id
+**Registro de usuario**
+Registrar usuario:
+-POST http://localhost:3000/api/v1/users/register
 
-También pueden revisar los canciones que han subido los usuarios para verificarlos y que aparezcan en la página o no:
+**Inicio de sesión**
+Iniciar sesión:
+-POST http://localhost:3000/api/v1/users/login
 
- - http://localhost:3000/api/v1/canciones/not-verified
- 
+**Acciones disponibles para usuarios:**
 
-No consigo concatenar lo de eliminarse a sí mismo del anterior ejercicio
+Los usuarios con el rol "user" pueden:
+
+Subir canciones (aunque un administrador debe verificarlas antes de que sean visibles):
+-POST http://localhost:3000/api/v1/canciones
+
+Eliminar su propio usuario:
+-DELETE http://localhost:3000/api/v1/users/:id
+
+**Acciones disponibles para administradores:**
+Los administradores pueden gestionar contenido y usuarios:
+
+Eliminar plataformas:
+-DELETE http://localhost:3000/api/v1/plataformas/:id
+
+Eliminar canciones:
+-DELETE http://localhost:3000/api/v1/canciones/:id
+
+Eliminar o editar usuarios:
+-DELETE http://localhost:3000/api/v1/users/:id
+-PUT http://localhost:3000/api/v1/users/:id
+
+Verificar canciones de usuarios: Los administradores pueden revisar las canciones que no han sido verificadas para aprobarlas o rechazarlas.
+-GET http://localhost:3000/api/v1/canciones/not-verified
+
+Convertir usuarios a administradores:
+-PUT http://localhost:3000/api/v1/users/:id
 
 ## La semilla
 
