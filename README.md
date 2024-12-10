@@ -4,56 +4,34 @@ Este proyecto es un backend diseñado para organizar canciones por plataformas y
 
 ## Features
 
-Endpoints
+Las personas registradas como usuario podrán realizar diferentes acciones:
 
-**Acceso público**
-Todo el mundo puede acceder a la información de las canciones y plataformas:
-
-**Obtener canciones:**
--GET http://localhost:3000/api/v1/canciones
-**Obtener plataformas:**
--GET http://localhost:3000/api/v1/plataformas
+- Crear una canción
+- Eliminar su usuario
+- Modificar su usuario
 
 
-**Acceso registrado (usuarios)**
-Para hacer cualquier tipo de modificación, los usuarios deben estar registrados e iniciar sesión.
+Los administradores, por su parte podrán realizar algunas más:
 
-**Registro de usuario**
-Registrar usuario:
--POST http://localhost:3000/api/v1/users/register
+-  Verificar una canción
+-  Eliminar una canción
+-  Editar una canción
+-  Eliminar una plataforma
+-  Editar una plataforma
+-  Eliminar un usuario
+-  Editar un usuario
 
-**Inicio de sesión**
-Iniciar sesión:
--POST http://localhost:3000/api/v1/users/login
+## Prueba
 
-**Acciones disponibles para usuarios:**
+Para probar la aplicación lo primero será registrarse, puede hacerse a través de `` - http://localhost:3000/api/v1/users/register ``
 
-Los usuarios con el rol "user" pueden:
+Una vez registrado debe acceder a través del login ``  http://localhost:3000/api/v1/users/login ``
 
-Subir canciones (aunque un administrador debe verificarlas antes de que sean visibles):
--POST http://localhost:3000/api/v1/canciones
+El usuario puede realizar búsquedas para ver qué canciones y plataformas hay ya en la aplicacion: 
 
-Eliminar su propio usuario:
--DELETE http://localhost:3000/api/v1/users/:id
-
-**Acciones disponibles para administradores:**
-Los administradores pueden gestionar contenido y usuarios:
-
-Eliminar plataformas:
--DELETE http://localhost:3000/api/v1/plataformas/:id
-
-Eliminar canciones:
--DELETE http://localhost:3000/api/v1/canciones/:id
-
-Eliminar o editar usuarios:
--DELETE http://localhost:3000/api/v1/users/:id
--PUT http://localhost:3000/api/v1/users/:id
-
-Verificar canciones de usuarios: Los administradores pueden revisar las canciones que no han sido verificadas para aprobarlas o rechazarlas.
--GET http://localhost:3000/api/v1/canciones/not-verified
-
-Convertir usuarios a administradores:
--PUT http://localhost:3000/api/v1/users/:id
+`` http://localhost:3000/api/v1/canciones
+  http://localhost:3000/api/v1/plataformas
+``
 
 ## La semilla
 
