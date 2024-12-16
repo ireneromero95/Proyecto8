@@ -1,5 +1,5 @@
 const { isAdmin } = require('../../middlewares/auth');
-const upload = require('../../middlewares/file');
+const { uploadPlatform } = require('../../middlewares/file');
 const {
   getPlataformas,
   postPlataforma,
@@ -10,12 +10,17 @@ const {
 const plataformasRoutes = require('express').Router();
 
 plataformasRoutes.get('/', getPlataformas);
-plataformasRoutes.post('/', [isAdmin], upload.single('imagen'), postPlataforma);
+plataformasRoutes.post(
+  '/',
+  [isAdmin],
+  uploadPlatform.single('imagen'),
+  postPlataforma
+);
 plataformasRoutes.delete('/:id', [isAdmin], deletePlataforma);
 plataformasRoutes.put(
   '/:id',
   [isAdmin],
-  upload.single('imagen'),
+  uploadPlatform.single('imagen'),
   updatePlataforma
 );
 module.exports = plataformasRoutes;

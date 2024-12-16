@@ -4,7 +4,7 @@ const canciones = [
     imagen: 'Imagen rota',
     genero: 'Rock',
     cantante: 'Estopa',
-    plataformas: '6716af0ea3162dd347e9ccff',
+    plataformas: '67605dc582bd3f3455a04876',
     verified: true
   },
   {
@@ -12,7 +12,7 @@ const canciones = [
     imagen: 'Imagen rota',
     genero: 'Trap',
     cantante: 'Yung Beef',
-    plataformas: '6716af0ea3162dd347e9ccff',
+    plataformas: '67605dc582bd3f3455a04876',
     verified: true
   },
   {
@@ -20,7 +20,7 @@ const canciones = [
     imagen: 'Imagen rota',
     genero: 'Hip-hop',
     cantante: 'Crema',
-    plataformas: '6716af0ea3162dd347e9ccff',
+    plataformas: '67605dc582bd3f3455a04876',
     verified: true
   },
   {
@@ -28,7 +28,7 @@ const canciones = [
     imagen: 'Imagen rota',
     genero: 'Pop',
     cantante: 'LaLa Love you',
-    plataformas: '6716af0ea3162dd347e9ccff',
+    plataformas: '67605dd782bd3f3455a04879',
     verified: true
   },
   {
@@ -36,7 +36,7 @@ const canciones = [
     imagen: 'Imagen rota',
     genero: 'Pop',
     cantante: 'One Direction',
-    plataformas: '6716af1ea3162dd347e9cd02',
+    plataformas: '67605dd782bd3f3455a04879',
     verified: true
   },
   {
@@ -44,7 +44,7 @@ const canciones = [
     imagen: 'Imagen rota',
     genero: 'Pop',
     cantante: 'Maroon 5',
-    plataformas: '6716af1ea3162dd347e9cd02',
+    plataformas: '67605dd782bd3f3455a04879',
     verified: true
   },
   {
@@ -52,7 +52,7 @@ const canciones = [
     imagen: 'Imagen rota',
     genero: 'Jazz',
     cantante: 'Fat Domino',
-    plataformas: '6716af1ea3162dd347e9cd02',
+    plataformas: '67605dd782bd3f3455a04879',
     verified: true
   },
   {
@@ -60,7 +60,7 @@ const canciones = [
     imagen: 'Imagen rota',
     genero: 'Tecno',
     cantante: 'Julio',
-    plataformas: '6716af2ba3162dd347e9cd05',
+    plataformas: '67605e1582bd3f3455a0487c',
     verified: true
   },
   {
@@ -68,7 +68,7 @@ const canciones = [
     imagen: 'Imagen rota',
     genero: 'Rock',
     cantante: 'Pereza',
-    plataformas: '6716af2ba3162dd347e9cd05',
+    plataformas: '67605e1582bd3f3455a0487c',
     verified: true
   },
   {
@@ -76,7 +76,7 @@ const canciones = [
     imagen: 'Imagen rota',
     genero: 'Trap',
     cantante: 'Yung beef',
-    plataformas: '6716af2ba3162dd347e9cd05',
+    plataformas: '67605e1582bd3f3455a0487c',
     verified: true
   }
 ];

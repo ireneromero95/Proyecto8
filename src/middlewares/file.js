@@ -2,7 +2,7 @@ const multer = require('multer');
 const cloudinary = require('cloudinary').v2;
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
-const storage = new CloudinaryStorage({
+const storageSong = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
     folder: 'Songs',
@@ -10,7 +10,19 @@ const storage = new CloudinaryStorage({
   }
 });
 
-const upload = multer({ storage });
-module.exports = upload;
+const storagePlatform = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: 'Platform',
+    allowedFormats: ['jpg', 'png', 'jpeg', 'gif', 'webp']
+  }
+});
+
+const uploadSong = multer({ storage: storageSong });
+const uploadPlatform = multer({ storage: storagePlatform });
+
+exports.uploadSong = uploadSong;
+exports.uploadPlatform = uploadPlatform;
+
 //Si aquí le cambiara el nombre a storage tendría que poner storage: elnombre, pero
 //funciona con short cut
