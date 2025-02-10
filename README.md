@@ -33,7 +33,11 @@ Los administradores, por su parte podrán realizar algunas más:
 
 - En caso de que fuera necesario rellenar el .env con las variables de entorno:
 
-``DB_URL = ``
+``DB_URL=
+JWT_SECRET=
+CLOUD_NAME=
+API_KEY=
+API_SECRET=``
 
 Y ejecutar el proyecto:
 
