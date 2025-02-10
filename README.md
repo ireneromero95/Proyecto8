@@ -23,7 +23,13 @@ Los administradores, por su parte podrán realizar algunas más:
 
 ## Prueba
 
-Para probar la aplicación lo primero será registrarse, puede hacerse a través de `` - http://localhost:3000/api/v1/users/register ``
+- Para probar la aplicación lo primero será clonar el repositorio
+
+``git clone https://github.com/ireneromero95/Proyecto8 ``
+
+
+
+registrarse, puede hacerse a través de `` - http://localhost:3000/api/v1/users/register ``
 
 Una vez registrado debe acceder a través del login ``  http://localhost:3000/api/v1/users/login ``
 
@@ -33,6 +39,18 @@ El usuario puede realizar búsquedas para ver qué canciones y plataformas hay y
   http://localhost:3000/api/v1/plataformas
 ``
 
+##Dependencias
+
+Este proyecto utiliza las siguientes dependencias:
+
+- express: Framework para crear el servidor web.
+- mongoose: ODM para interactuar con MongoDB.
+- jsonwebtoken: Para la gestión de autenticación y autorización.
+- cloudinary: Para gestionar el almacenamiento de imágenes en la nube.
+- bcryptjs: Para el hash y comparación de contraseñas.
+- dotenv: Para manejar variables de entorno.
+- cors: Para habilitar CORS y permitir peticiones desde diferentes orígenes.
+  
 ## La semilla
 
 La semilla esta con imagen rota ya que no se crear de base para que cargue el archivo, pero cuando se sube una cancion con archivo se pone como imagen, se pueden actualizar iniciando sesión como administrador y, así, ponerle una imagen que cargue en cloudinary. Y también las imágenes de las plataformas están cargadas en cloudinary.
