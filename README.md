@@ -27,11 +27,24 @@ Los administradores, por su parte podrán realizar algunas más:
 
 ``git clone https://github.com/ireneromero95/Proyecto8 ``
 
+- Entrar al proyecto e instalar las dependencias (indicadas más abajo)
 
+`` npm i``
 
-registrarse, puede hacerse a través de `` - http://localhost:3000/api/v1/users/register ``
+- En caso de que fuera necesario rellenar el .env con las variables de entorno:
 
-Una vez registrado debe acceder a través del login ``  http://localhost:3000/api/v1/users/login ``
+``DB_URL = ``
+
+Y ejecutar el proyecto:
+
+``npm run start
+npm run dev``
+
+- Una vez iniciado ya podría registrarse el usuario, a través de:
+ `` http://localhost:3000/api/v1/users/register ``
+
+- Una vez registrado ya puede acceder a través del login:
+  ``  http://localhost:3000/api/v1/users/login ``
 
 El usuario puede realizar búsquedas para ver qué canciones y plataformas hay ya en la aplicacion: 
 
